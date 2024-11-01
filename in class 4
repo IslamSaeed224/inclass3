@@ -1,1 +1,120 @@
+def display_info():
+    # Information about the book
+    title = "Can't Hurt Me"
+    author = "David Goggins"
+    description = (
+        "In 'Can't Hurt Me,' David Goggins shares his incredible life story and "
+        "the mental and physical challenges he overcame. Known for his resilience, "
+        "Goggins reveals how he transformed his life from poverty and abuse to "
+        "becoming a Navy SEAL, ultra-endurance athlete, and motivational speaker. "
+        "The book offers insights into Goggins' mindset and provides strategies "
+        "for overcoming adversity, pushing limits, and embracing discomfort to "
+        "achieve true potential."
+    )
 
+    # Display book information
+    print(f"Title: {title}")
+    print(f"Author: {author}")
+    print("Description:")
+    print(description)
+
+# Call the function to display the information
+display_info()
+
+
+
+
+
+def london_attractions():
+    print("Top Attractions in London:")
+    print("- The British Museum")
+    print("- Tower of London")
+    print("- Buckingham Palace")
+    print("- London Eye")
+    print("- Big Ben and the Houses of Parliament")
+    print("- Tate Modern")
+    print("- The Shard")
+    print("- Hyde Park")
+    print("- West End Theatre District")
+    print()
+
+
+def paris_attractions():
+    print("Top Attractions in Paris:")
+    print("- Eiffel Tower")
+    print("- Louvre Museum")
+    print("- Notre-Dame Cathedral")
+    print("- Sacré-Cœur and Montmartre")
+    print("- Champs-Élysées and Arc de Triomphe")
+    print("- Palace of Versailles")
+    print("- Musée d'Orsay")
+    print("- Seine River Cruise")
+    print("- Sainte-Chapelle")
+    print()
+
+
+def new_york_attractions():
+    print("Top Attractions in New York:")
+    print("- Statue of Liberty")
+    print("- Central Park")
+    print("- Times Square")
+    print("- Empire State Building")
+    print("- The Metropolitan Museum of Art")
+    print("- Broadway and the Theatre District")
+    print("- Rockefeller Center")
+    print("- Brooklyn Bridge")
+    print("- One World Observatory")
+    print()
+
+
+# Call the functions to display attractions for each city
+london_attractions()
+paris_attractions()
+new_york_attractions()
+
+
+import turtle
+
+def draw_square():
+    """Draws a square with a fixed side length."""
+    side_length = 100
+    for _ in range(4):
+        turtle.forward(side_length)
+        turtle.right(90)
+
+# Set up the turtle
+turtle.speed(1)
+
+# Draw the first square
+draw_square()
+
+# Move turtle to a new position for the second square
+turtle.penup()
+turtle.goto(150, 0)  # Move right to avoid overlap
+turtle.pendown()
+
+# Draw the second square
+draw_square()
+
+# Move turtle to a new position for the third square
+turtle.penup()
+turtle.goto(300, 0)  # Move further right
+turtle.pendown()
+
+# Draw the third square
+draw_square()
+
+# End the drawing
+turtle.done()
+
+
+
+ef find_even_numbers():
+    even_numbers = []  # Initialize an empty list to store even numbers
+    for number in range(0, 11):  # Loop from 0 to 10
+        if number % 2 == 0:  # Check if the number is even
+            even_numbers.append(number)  # Add even number to the list
+    print("Even numbers between 0 and 10:", even_numbers)
+
+# Call the function
+find_even_numbers()
