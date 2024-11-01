@@ -24,3 +24,92 @@ t.right(45)
 
 
 turtle.done()
+
+
+
+
+import turtle
+
+
+t = turtle.Turtle()
+t.speed(1) 
+
+
+for _ in range(8):
+    t.forward(100)
+    t.right(45)
+
+
+turtle.done()
+
+
+import turtle
+
+def draw_star(turtle_obj, length):
+    """Draws a five-pointed star with the given turtle object and side length."""
+    for _ in range(5):
+        turtle_obj.forward(length)
+        turtle_obj.right(144)  # Each point angle requires a 144-degree turn
+
+# Initialize the first turtle
+star_turtle1 = turtle.Turtle()
+star_turtle1.color("blue")  # Set the color of the first turtle
+star_turtle1.speed(1)
+
+# Draw the first star
+draw_star(star_turtle1, 100)
+
+# Initialize the second turtle and move it to a new location
+star_turtle2 = turtle.Turtle()
+star_turtle2.color("red")  # Set the color of the second turtle
+star_turtle2.speed(1)
+
+# Move the second turtle to a new location
+star_turtle2.penup()
+star_turtle2.goto(150, 0)  # Move to position (150, 0)
+star_turtle2.pendown()
+
+# Draw the second star
+draw_star(star_turtle2, 100)
+
+# End the drawing
+turtle.done()
+
+
+
+
+import turtle
+import random
+
+# Initialize the screen
+screen = turtle.Screen()
+screen.bgcolor("white")
+
+# Function to create a turtle and set random color
+def create_turtle():
+    t = turtle.Turtle()
+    t.speed(0)  # Fastest speed
+    t.color(random.random(), random.random(), random.random())  # Random color
+    return t
+
+# Function to draw a circle pattern
+def draw_flower(turtle_obj, radius, num_petals):
+    angle = 360 / num_petals
+    for _ in range(num_petals):
+        turtle_obj.circle(radius)  # Draw a circle
+        turtle_obj.right(angle)    # Rotate to draw the next petal
+
+# Main drawing loop
+flower_radius = 100
+petal_count = 12
+layer_count = 5
+
+for layer in range(layer_count):
+    t = create_turtle()
+    t.penup()
+    t.goto(0, -layer * 10)  # Move slightly down with each layer
+    t.pendown()
+    draw_flower(t, flower_radius - layer * 10, petal_count + layer * 2)  # Adjust radius and petal count per layer
+
+# End the drawing
+turtle.done()
